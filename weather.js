@@ -27,7 +27,6 @@ function editPage(event) {
 }
 
 let city = document.querySelector("#search-city-input");
-let country = document.querySelector("#search-country-input");
 
 let formSearch = document.querySelector("form");
 formSearch = document.addEventListener("submit", editPage);
