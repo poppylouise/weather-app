@@ -1,18 +1,3 @@
-// current location 
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", displayLocation);
-
-function displayLocation(event) {
-event.preventDefault();
-navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-function searchLocation(position) {
-
-}
-
-
 // update temp
 
 function currentTemp(response) {
