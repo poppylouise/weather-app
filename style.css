@@ -1,0 +1,48 @@
+.weatherProject {
+    max-width: 700px;
+    margin: 30px auto;
+    background: linear-gradient(180deg, rgb(247, 229, 196) 0%, rgb(245, 122, 117) 100%);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 30px;
+  border: solid;
+  border-color: #fea386;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.col-4 {
+  border: solid;
+  border-color: #fea386;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+h2 {text-align: center;
+}
+
+.forecast {
+  border: solid;
+  border-color:#fea386;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.form {
+    text-align: center;
+}
+
+button {
+  background-color: #f19584;
+}
+
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <title> Weather App </title>
+  
+  </head>
+
+  <body>
+    <div class = "weatherProject">
+      <div class="container">
+      
+      <h1> 
+         <span id="city">London</span>,
+         <span id="country">England</span> 
+         <button id="current-location">
+             📍 
+         </button>
+      </h1>
+
+      <br /> <br>
+
+        <div class="row">
+
+            <div class="col-4">
+                 <h5 id="current-date">  Today's Date </h5>
+                 <p id="current-time">  Today's Time </p>
+             </div>
+
+             <div class="col-4">
+
+                 <h5> Temperature </h5>
+                 <p id="current-temp"> 17°C </p>
+                 <p id="description"> Cloudy </p>
+
+                
+                 
+             </div>
+    
+             <div class="col-4">
+                 <h5> Conditions </h5>
+                 <p>
+                 Humidity: <span id="humidity"> 87</span>% 
+                 <br>
+                 Wind Speed: <span id="wind-speed"> 15</span>mph 
+                 </p>
+             </div>
+
+         </div>
+
+    <br>
+
+    <h2> Remember to bring your umbrella! 🌧 </h2>
+   
+    <br />
+
+      <div class="forecast">
+      <div class="row">
+
+        <div class="col-6">
+             <strong> 
+                 Monday
+             <br />
+             <br />
+                 Tuesday
+             <br />
+             <br />
+                 Wednesday
+             <br />
+             <br />
+                 Thursday
+             <br />
+             <br />
+                 Friday 
+             </strong>
+             <br />
+             <br />
+        </div>
+
+        <div class="col-3">
+             20°C
+                 <br />
+                 <br />
+             22°C
+                 <br />
+                 <br />
+             23°C
+                 <br />
+                 <br />
+             24°C
+                 <br />
+                 <br />
+             23°C
+                 <br />
+                 <br />
+        </div>
+
+        <div class="col-3">
+             🌩
+                 <br />
+                 <br />
+             ⛅️
+                 <br />
+                 <br />
+             ⛅️
+                 <br />
+                 <br />
+             ☁️
+                 <br />
+                 <br />
+             ⛅️
+                 <br />
+                 <br />
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="form">
+
+    <form id="search-bar">
+
+      <input 
+      type="text"
+      placeholder="Search city"
+      id="search-city-input">
+
+      <input 
+      type="text" 
+      placeholder="Search country"
+      id="search-country-input">
+
+      <input 
+      type="submit" 
+      value="Search">
+
+    </form>
+    </div>
+
+    <script src="weather.js"></script>
+    </div>
+
+  </body>
+</html>
