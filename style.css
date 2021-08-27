@@ -1,7 +1,7 @@
 .weatherProject {
     max-width: 700px;
     margin: 30px auto;
-    background: linear-gradient(180deg, rgb(247, 229, 196) 0%, rgb(245, 122, 117) 100%);
+    background-color: #f7c5ad;
     padding: 30px;
     border-radius: 20px;
 }
@@ -13,25 +13,27 @@ h1 {
   border: solid;
   border-color: #fea386;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .col-4 {
   border: solid;
   border-color: #fea386;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 h2 {text-align: center;
 }
 
 .forecast {
-  border: solid;
-  border-color:#fea386;
-  padding: 10px;
-  border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #fea386;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
 .form {

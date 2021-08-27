@@ -75,7 +75,7 @@ function formatDate(date) {
   ];
   let month = months[now.getMonth()];
 
-  return `Last updated on ${day} ${number} ${month} ${year}`;
+  return `${day} ${number} ${month} ${year}`;
 }
 
 let now = new Date();
