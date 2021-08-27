@@ -46,3 +46,7 @@ button:hover {
   background-color: white;
   cursor: pointer;
 }
+
+small {
+  text-align: center;
+}
