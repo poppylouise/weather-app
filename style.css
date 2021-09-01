@@ -19,12 +19,50 @@ h1 {
 .col-4 {
   border: solid;
   border-color: #fea386;
-  padding: 5px;
+  padding: 0px;
   text-align: center;
   border-radius: 10px;
+  font-size: 20px;
 }
 
-h2 {text-align: center;
+.currentDate {
+  position: relative;
+  top: 50px;
+}
+
+img {
+  width: 70px;
+  position: relative;
+  right: 40px;
+  top: 50px;
+}
+
+.currentTemp {
+  font-size: 40px;
+position: relative;
+top: -20px;
+right: -30px;
+}
+
+.units {
+    position: relative;
+    font-size: 16px;
+    top: -18px;
+}
+
+.description {
+  font-size: 20px;
+  position: relative;
+  top: -30px;
+}
+
+.conditions {
+  position: relative;
+  top: 50px;
+}
+
+h2 {
+  text-align: center;
 }
 
 .forecast {

@@ -15,7 +15,9 @@ function currentTemp(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
-  
+
+  document.querySelector("#icon").innerHTML = response.data.weather.icon;
+
 }
 
 // search city

@@ -33,21 +33,30 @@
 
         <div class="row">
           <div class="col-4">
+            <div class="currentDate">
             <p id="current-date">Today's Date</p>
             <p id="current-time">Today's Time</p>
-          </div>
+           </div>
+           </div>
+
+           <div class="col-4">
+           <div class="currentTempContainer">
+             <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png">
+             <p class="currentTemp" id="current-temp">17<span class="units">°C</span>
+              </p>
+             <p class="description" id="description">Clouds</p>
+           </div>
+           </div>
+  
 
           <div class="col-4">
-            <p id="current-temp">17°C</p>
-            <p id="description">Clouds</p>
-          </div>
-
-          <div class="col-4">
+            <div class="conditions">
             <p>
               Humidity: <span id="humidity"> 87</span>%
               <br />
               Wind Speed: <span id="wind-speed"> 15</span>mph
             </p>
+          </div>
           </div>
         </div>
 
