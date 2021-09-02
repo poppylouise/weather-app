@@ -1,9 +1,9 @@
 .weatherProject {
-    max-width: 700px;
-    margin: 30px auto;
-    background-color: #f7c5ad;
-    padding: 30px;
-    border-radius: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #f7c5ad;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 h1 {
@@ -16,10 +16,14 @@ h1 {
   border-radius: 10px;
 }
 
+.form .form-control {
+  background-color: #f19584;
+}
+
 .col-4 {
   border: solid;
   border-color: #fea386;
-  padding: 0px;
+  padding: 5px;
   text-align: center;
   border-radius: 10px;
   font-size: 20px;
@@ -33,18 +37,26 @@ h1 {
 img {
   width: 70px;
   position: relative;
-  right: 40px;
-  top: 50px;
+  right: 50px;
+  top: 47px;
 }
 
-.currentTemp {
+.currentTempContainer .currentTemp {
   font-size: 40px;
-position: relative;
-top: -20px;
-right: -30px;
+  position: relative;
+  top: -20px;
+  right: -30px;
 }
 
-.description {
+.currentTempContainer .units {
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  top: -37px;
+  right: -25px;
+}
+
+.currentTempContainer .description {
   font-size: 20px;
   position: relative;
   top: -30px;
@@ -55,21 +67,18 @@ right: -30px;
   top: 50px;
 }
 
-h2 {
+.forecast {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #fea386;
+  border-radius: 10px;
+  padding: 5px;
   text-align: center;
 }
 
-.forecast {
-    display: block;
-    margin: 0 auto;
-    border: 3px solid #fea386;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
 .form {
-    text-align: center;
+  position: relative;
+  width: 100%;
 }
 
 button {

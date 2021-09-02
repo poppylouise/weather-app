@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Weather App</title>
+
   </head>
 
   <body>
@@ -25,10 +26,37 @@
         <h1>
           <span id="city">London</span>,
           <span id="country">GB</span>
-          <button id="current-location">📍</button>
         </h1>
 
-        <br />
+        <br> <br>
+
+        <div class="form">
+        <form id="search-bar">
+          <div class="row">
+          <div class="col-6">
+           <input 
+             type="text" 
+             placeholder="Search city" 
+             id="search-city-input"
+             class="form-control"/>
+           </div>
+          <div class="col-3">
+            <input 
+             type="submit" 
+             value="Search"
+             class="form-control"/>
+             </div>
+          <div class="col-3">
+             <input
+             type="submit"
+             value="📍"
+             class="form-control"
+             id="geolocation"/>
+           </div>
+           </div>
+        </form>
+      </div>
+
         <br />
 
         <div class="row">
@@ -42,9 +70,21 @@
            <div class="col-4">
            <div class="currentTempContainer">
              <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds">
-             <p class="currentTemp" id="current-temp">17<span class="units">°C</span>
-              </p>
-             <p class="description" id="description">Clouds</p>
+             <p>
+               <span
+                 class="currentTemp" 
+                 id="current-temp">17</span> 
+               <span>
+                 <a href="#"
+                 id="c-temp"
+                 class="units">°C</span></a>
+                 <span class="units"> | </span>
+                 <a href="#"
+                 class="units"
+                 id="f-temp">°F</a>
+             </p>
+            <p class="description" 
+            id="description">Clouds</p>
            </div>
            </div>
   
@@ -95,27 +135,18 @@
           </div>
           </div>
 
-      <br /><br />
+       <br />
 
-      <div class="form">
-        <form id="search-bar">
-          <input type="text" placeholder="Search city" id="search-city-input" />
-
-          <input type="submit" value="Search" />
-        </form>
-      </div>
-
-      <br />
-
-      <footer>
+       <footer>
         <a href="https://github.com/poppylouise/weather-app" target="_blank">
           Open-source code </a>
         by Poppy Laurens, hosted on 
         <a href="https://wonderful-leavitt-e36436.netlify.app/" target="-blank">
         Netlify </a>
-      </footer>
+       </footer>
 
-      <script src="weather.js"></script>
+       <script src="weather.js"></script>
+
     </div>
   </body>
 </html>

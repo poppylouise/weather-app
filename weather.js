@@ -1,3 +1,28 @@
+// celcius conversion 
+
+function convertCDegree(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = Math.round(celciusConvert);
+}
+
+let cLink = document.querySelector("#c-temp");
+cLink.addEventListener("click", convertCDegree);
+
+// fahrenheit conversion 
+
+function convertFDegree(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  let fahrenheitTemp = (celciusConvert * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fLink = document.querySelector("#f-temp");
+fLink.addEventListener("click", convertFDegree);
+
+let celciusConvert = null;
+
 // update temp
 
 function currentTemp(response) {
@@ -7,8 +32,10 @@ function currentTemp(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
 
-  let temp = Math.round(response.data.main.temp);
-  document.querySelector("#current-temp").innerHTML = `${temp}°C`;
+  celciusConvert = response.data.main.temp;
+
+  let temp = Math.round(celciusConvert);
+  document.querySelector("#current-temp").innerHTML = `${temp}`;
 
   document.querySelector("#description").innerHTML = response.data.weather[0].main;
 
