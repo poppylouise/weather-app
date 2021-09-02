@@ -2,7 +2,7 @@
 
 function currentTemp(response) {
 
-  console.log(response.data);
+  console.log(response.data)
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
@@ -20,6 +20,10 @@ function currentTemp(response) {
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    response.data.weather[0].description
   );
 }
 
