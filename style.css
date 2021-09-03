@@ -81,6 +81,10 @@ h1 {
   opacity: 0.8;
 }
 
+.forecast-icon {
+ width: 70px;
+}
+
 .form {
   position: relative;
   width: 100%;
