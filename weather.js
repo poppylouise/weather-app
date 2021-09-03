@@ -1,3 +1,20 @@
+// geolocation 
+
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(findGeolocation);
+}
+
+function findGeolocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=99ca1962130c3af851da8d236c625e87&units=metric`;
+  axios.get(apiUrl).then(currentTemp);
+}
+
+let button = document.querySelector("#geolocation");
+button.addEventListener("click", getCurrentPosition)
+
 // celcius conversion 
 
 function convertCDegree(event) {
