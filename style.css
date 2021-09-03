@@ -34,7 +34,7 @@ h1 {
   top: 50px;
 }
 
-img {
+.icon {
   width: 70px;
   position: relative;
   right: 50px;
@@ -67,13 +67,18 @@ img {
   top: 50px;
 }
 
-.forecast {
+.weather-forecast {
   display: block;
   margin: 0 auto;
   border: 3px solid #fea386;
   border-radius: 10px;
   padding: 5px;
   text-align: center;
+  font-size: 16px;
+}
+
+.forecast-day {
+  opacity: 0.8;
 }
 
 .form {
