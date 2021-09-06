@@ -70,12 +70,14 @@ h1 {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  border-color: #f19584;
+  border: solid;
+  border-color: #fea386;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .weather-forecast-date {
   font-size: 20px;
-  opacity: 0.5;
 }
 
 .weather-forecast-temperature-min {
