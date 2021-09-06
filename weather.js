@@ -114,16 +114,29 @@ function currentTemp(response) {
 }
 // search city
 
-function editPage(event) {
-  event.preventDefault();
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=99ca1962130c3af851da8d236c625e87&&units=metric`;
+function search(city) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=99ca1962130c3af851da8d236c625e87&&units=metric`;
   axios.get(apiUrl).then(currentTemp);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-city-input");
+  let city = document.querySelector("#city");
+  if (searchInput.value) {
+    city.innerHTML = `${searchInput.value}`;
+    search(searchInput.value);
+  } else {
+    city = null;
+    alert("Please enter a city");
+  }
+}
 let city = document.querySelector("#search-city-input");
 
 let formSearch = document.querySelector("form");
-formSearch = document.addEventListener("submit", editPage);
+formSearch = document.addEventListener("submit", search);
+
+search("London");
 
 // date and time
 
