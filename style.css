@@ -68,21 +68,22 @@ h1 {
 }
 
 .weather-forecast {
-  display: block;
-  margin: 0 auto;
-  border: 3px solid #fea386;
-  border-radius: 10px;
-  padding: 5px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 16px;
+  border-color: #f19584;
 }
 
-.forecast-day {
-  opacity: 0.8;
+.weather-forecast-date {
+  font-size: 20px;
+  opacity: 0.5;
 }
 
-.forecast-icon {
- width: 70px;
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 20px;
 }
 
 .form {

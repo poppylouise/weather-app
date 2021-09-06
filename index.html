@@ -7,17 +7,12 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
-
     <title>Weather App</title>
-
   </head>
 
   <body>
@@ -69,7 +64,10 @@
 
            <div class="col-4">
            <div class="currentTempContainer">
-             <img id="icon" class="icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="clouds">
+             <img id="icon" 
+             class="icon" 
+             src="http://openweathermap.org/img/wn/10d@2x.png" 
+             alt="clouds">
              <p>
                <span
                  class="currentTemp" 
@@ -102,53 +100,8 @@
 
         <br />
 
-        <div class="weather-forecast">
-
-          <div class="forecast-day">
-            <div class="row">
-              <div class="col">Monday</div>
-              <div class="col">Tuesday</div>
-              <div class="col">Wednesday</div>
-              <div class="col">Thursday</div>
-              <div class="col">Friday</div>
-            </div>
-          </div>
-          
-          <div class="weather-icon">
-            <div class="row">
-              <div class="col">
-                <img class="forecast-icon" 
-                src="http://openweathermap.org/img/wn/10d@2x.png">
-              </div>
-              <div class="col">
-                <img class="forecast-icon" 
-                src="http://openweathermap.org/img/wn/10d@2x.png">
-              </div>
-              <div class="col">
-                <img class="forecast-icon" 
-                src="http://openweathermap.org/img/wn/10d@2x.png">
-              </div>
-              <div class="col">
-                <img class="forecast-icon" 
-                src="http://openweathermap.org/img/wn/10d@2x.png">
-              </div>
-              <div class="col">
-                <img class="forecast-icon" 
-                src="http://openweathermap.org/img/wn/10d@2x.png">
-              </div>
-            </div>
-          </div>
-
-          <div class="forecast-weather">
-              <div class="row">
-                  <div class="col">20°C</div>
-                  <div class="col">20°C</div>
-                  <div class="col">20°C</div>
-                  <div class="col">20°C</div>
-                  <div class="col">20°C</div>
-            </div>
-          </div>
-          </div>
+          <div class="weather-forecast" id="forecast">
+        </div>
 
        <br />
 
@@ -156,7 +109,7 @@
         <a href="https://github.com/poppylouise/weather-app" target="_blank">
           Open-source code </a>
         by Poppy Laurens, hosted on 
-        <a href="https://wonderful-leavitt-e36436.netlify.app/" target="-blank">
+        <a href="https://wonderful-leavitt-e36436.netlify.app/" target="_blank">
         Netlify </a>
        </footer>
 

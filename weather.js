@@ -1,4 +1,42 @@
-// geolocation 
+// 7 day forecast
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function(day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                <div class="col-2">
+                  <div class="weather-forecast-date">${day}</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/50d@2x.png"
+                    alt=""
+                    width="42"/>
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max"> 18° </span>
+                    <span class="weather-forecast-temperature-min"> 12° </span>
+                  </div>
+                </div>`;
+    
+  })
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=99ca1962130c3af851da8d236c625e87&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
+// geolocation
 
 function getCurrentPosition(event) {
   event.preventDefault();
@@ -13,9 +51,9 @@ function findGeolocation(position) {
 }
 
 let button = document.querySelector("#geolocation");
-button.addEventListener("click", getCurrentPosition)
+button.addEventListener("click", getCurrentPosition);
 
-// celcius conversion 
+// celcius conversion
 
 function convertCDegree(event) {
   event.preventDefault();
@@ -26,7 +64,7 @@ function convertCDegree(event) {
 let cLink = document.querySelector("#c-temp");
 cLink.addEventListener("click", convertCDegree);
 
-// fahrenheit conversion 
+// fahrenheit conversion
 
 function convertFDegree(event) {
   event.preventDefault();
@@ -43,9 +81,6 @@ let celciusConvert = null;
 // update temp
 
 function currentTemp(response) {
-
-  console.log(response.data)
-
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
 
@@ -54,23 +89,23 @@ function currentTemp(response) {
   let temp = Math.round(celciusConvert);
   document.querySelector("#current-temp").innerHTML = `${temp}`;
 
-  document.querySelector("#description").innerHTML = response.data.weather[0].main;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
-  document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute(
-    "alt",
-    response.data.weather[0].description
-  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
-
 // search city
 
 function editPage(event) {
