@@ -134,7 +134,7 @@ function handleSubmit(event) {
 let city = document.querySelector("#search-city-input");
 
 let formSearch = document.querySelector("form");
-formSearch = document.addEventListener("submit", search);
+formSearch.addEventListener("submit", handleSubmit);
 
 search("London");
 
